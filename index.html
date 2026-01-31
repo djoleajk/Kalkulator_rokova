@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator roka izrade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Kalkulator roka izrade (radni dani)</h1>
+            
+            <div class="input-group">
+                <label for="startDate">Početni datum:</label>
+                <input type="date" id="startDate" required>
+            </div>
+
+            <div class="input-group">
+                <label for="workDays">Broj radnih dana:</label>
+                <input type="number" id="workDays" min="1" placeholder="Unesite broj radnih dana" required>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="includeHolidays">
+                <label for="includeHolidays">Uključi državne praznike</label>
+            </div>
+
+            <button id="calculateBtn" class="btn-calculate">Izračunaj rok</button>
+
+            <div id="result" class="result hidden">
+                <div class="result-content">
+                    <p class="result-date"></p>
+                    <p class="result-day"></p>
+                </div>
+            </div>
+
+            <div id="error" class="error hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
